@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> 
+        <title>Set Timeout</title>
+    </head>
+
+    <body>
+
+        <input placeholder="
+        set time" class="js-time">
+
+        <button class="
+        js-start-button" onclick="
+         count()
+         
+          "
+          >Start</button>
+
+        <p class="js-show-timer"></p>
+
+        <script>
+            /*
+                    function fun1() {
+                        console.log('Hello World');
+                    }
+                
+                    setTimeout(fun1, 2000);
+
+                    setInterval(function fun2() {
+                        console.log('this is interval');
+                    }, 3000);
+
+                    setInterval (fun1, 4000);
+
+                    */
+
+                    
+                const input = document.querySelector('.js-time');
+                let time = Number(input.value);
+
+                function count() {
+                        console.log(time);
+                        time--;
+
+                        if (time < 0) {
+                            console.log('Times up');
+                            clearInterval(timerInterval);
+                        }
+
+                        
+                    }
+
+                const timerInterval = setInterval(count, 1000);
+
+                    document.querySelector('.js-show-timer')
+                 .innerHTML = time;
+
+                 
+
+                   
+        </script>
+    </body>
+    
+
+        
+
+
+     
+       
+   
+
+
+    
+
+   
+</html>
